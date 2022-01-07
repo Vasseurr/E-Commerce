@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/components/widgets/food_card.dart';
 import 'package:e_commerce/core/extension/context_extension.dart';
 import 'package:e_commerce/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
@@ -23,39 +24,16 @@ class HomePage extends GetView<HomeController> {
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3, mainAxisSpacing: 4),
               itemBuilder: (context, index) {
-                return foodCard(context);
-              },
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  foodCard(BuildContext context) {
-    return FittedBox(
-      child: Column(
-        children: [
-          Container(
-            width: context.getWidth * 0.3,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.grey.shade300),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Image.asset(
+                return FoodCard(
+                 image: Image.asset(
                 "assets/images/oliveoil.png",
                 fit: BoxFit.cover,
               ),
+              foodName: "Olive oil"
+                );
+              },
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 8.0, bottom: 12.0),
-            child: Text(
-              "Olive oil",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-            ),
-          ),
+          )
         ],
       ),
     );
