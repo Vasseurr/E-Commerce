@@ -10,7 +10,7 @@ void main() async {
   //await Hive.initFlutter();
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: Routes.INITIAL,
+    initialRoute: Routes.SECOND,
     //theme: AppThemeLight.instance.theme,
     getPages: AppPages.pages,
   ));

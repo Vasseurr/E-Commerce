@@ -17,8 +17,9 @@ class _CustomScaffoldState extends State<CustomScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
         resizeToAvoidBottomInset: false,
-        appBar: appBar(context),
+        // appBar: appBar(context),
         //bottomNavigationBar:
         body: widget.body);
   }
@@ -30,7 +31,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       automaticallyImplyLeading: false,
       title: Center(
           child: Text(
-        "E-COMMERCE APP",
+        "YE İÇ DOY",
       )),
     );
   }
